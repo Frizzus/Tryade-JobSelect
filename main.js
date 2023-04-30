@@ -28,7 +28,7 @@ async function init() {
     let job;
     for (let i = 0; i < APP_STATE.elements.length; i++) {
         job = createJobFile(APP_STATE.elements[i]);
-        if (i == 0) {
+        if (i == 1) {
             job.classList.add("mid");
         }
         APP_STATE.loadedInDom.push(job);
@@ -41,6 +41,9 @@ async function init() {
     // Enable slider EventListener
     document.getElementById("rightButton").addEventListener("click", slideRight);
     document.getElementById("leftButton").addEventListener("click", slideLeft);
+
+    // place to the right card at the launch of the interface
+    APP_STATE.loadedInDom[2].scrollIntoView({behavior: "instant", inline: "center"});
 }
 
 // ---------------INIT--------------- //

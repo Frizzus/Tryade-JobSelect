@@ -58,11 +58,13 @@
 
 .job>button:hover{
     cursor: pointer;
-    box-shadow: 0 0 0.2rem white;
+    outline: white solid 0.01rem;
 }
 
 .job>button:active{
-    box-shadow: 0 0 0.2rem var(--contrast);
+    outline: var(--contrast) solid 0.01rem;
+    color: white;
+    background-color: var(--contrast);
 }
 
 .job section{
@@ -120,40 +122,4 @@
 
 .job p:nth-of-type(2){
     margin-bottom: 0.6rem;
-}
-
-.hidden{
-    display: none;
-}
-
-.mid{
-    transform: scale(1, 1);
-}
-
-.side{
-    transform: scale(0.9, 0.9);
-}
-
-@keyframes appear{
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-}
-.appear{
-    animation-name: appear;
-    animation-duration: 0.5s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-    display: grid;
-}
-.disappear{
-    animation-name: appear;
-    animation-duration: 0.5s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-    animation-direction: reverse;
-    display: none;
 }

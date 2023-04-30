@@ -83,10 +83,12 @@ html{
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
+  transition: scale 0.1s ease-in-out;
 }
 
 #rightButton:hover>img, #leftButton:hover>img{
   box-shadow: 0 0 0.2rem white;
+  scale: 1.2 1.2;
 }
 
 #rightButton:active>img, #leftButton:active>img{

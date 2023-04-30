@@ -1,5 +1,5 @@
 export const APP_STATE = {
     elements: [], // HTML elements
-    mid: [false, true, false],
+    mid: [false, false, true],
     loadedInDom: []
 }
