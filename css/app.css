@@ -1,0 +1,106 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("../static/Poppins/Poppins-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins Medium";
+  src: url("../static/Poppins/Poppins-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins Semi-bold";
+  src: url("../static/Poppins/Poppins-SemiBold.ttf") format("truetype");
+}
+
+body{
+  background-color: rgba(30, 30, 30, 0.5);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  contain: strict;
+}
+
+:root{
+  font-size: 1.3vw;
+  --background: #23252D;
+  --button: #383C4D;
+  --contrast: #20C997;
+  --filter: hsla(0, 0%, 9.4%, 0.4);
+}
+
+html{
+  background-image: url("../static/placeholder.jpg");
+  background-size: cover;
+  background-position: bottom center;
+  background-color: #999;
+  background-blend-mode: multiply;
+  height: 100vh;
+  width: 100vw;
+}
+
+#App{
+  /* outline: white dashed 2px; */
+  height: 32vw;
+  width: 67vw;
+  position: relative;
+}
+
+#App>div:not(#rightButton, #leftButton){
+  width: 100%;
+  height: 90%;
+  display: flex;
+  gap: 3.3rem;
+  position: relative;
+  z-index: 0;
+  overflow-x: scroll;
+}
+
+#App>div:not(#rightButton, #leftButton)::-webkit-scrollbar{
+  display: none;
+}
+
+/* Buttons */
+
+#rightButton, #leftButton{
+  position: absolute;
+  height: 90%;
+  width: 34%;
+  /* outline: 1px #20C997 dotted; */
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  top: 0;
+}
+
+#rightButton>img, #leftButton>img{
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+#rightButton:hover>img, #leftButton:hover>img{
+  box-shadow: 0 0 0.2rem white;
+}
+
+#rightButton>img:hover, #leftButton>img:hover{
+  cursor: pointer;
+}
+
+#leftButton>img{
+  transform: rotateZ(180deg);
+}
+
+#leftButton{
+  left: 0;
+  justify-content: end;
+}
+
+#rightButton{
+  right: 0;
+}

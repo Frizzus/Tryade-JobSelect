@@ -1,0 +1,158 @@
+.job{
+    box-sizing: border-box;
+    height: 100%;
+    min-width: 15rem;
+    border-radius: 1.5rem;
+    background-color: var(--background);
+    display: grid;
+    grid-template-rows: 25% 65% 10%;
+    padding: 0.4rem;
+    transform: scale(0.85, 0.85);
+}
+
+.mid{
+    transform: scale(1, 1);
+}
+
+.filler{
+    height: 100%;
+    min-width: 15rem;
+}
+
+.job>header{
+    border-radius: 1.2rem;
+    background-color: var(--filter);
+    background-size: cover;
+    background-position: top center;
+    background-blend-mode: multiply;
+    padding: 1.2rem;
+}
+
+.job>header div{
+    font-family: "Poppins Medium";
+    text-transform: uppercase;
+    font-size: 0.5rem;
+    letter-spacing: 0.1rem;
+}
+
+.job h3{
+    margin: 0;
+    font-size: 120%;
+    font-family: 'Poppins Semi-bold';
+}
+
+.job>header div, .job h3{
+    color: #FFF;
+    line-height: 95%;
+}
+
+.job>button{
+    background-color: var(--button);
+    border-radius: 0.7rem 0.7rem 1.2rem 1.2rem;
+    color: #FFF;
+    font-size: 0.75rem;
+    font-family: "Poppins Medium";
+    border: none;
+    box-shadow: 0.05rem 0.05rem 0.1rem black;
+}
+
+.job>button:hover{
+    cursor: pointer;
+}
+
+.job>button:active{
+    box-shadow: -0.05rem -0.05rem 0.1rem black;
+}
+
+.job section{
+    padding: 0.8rem;
+}
+
+.job ul{
+    margin: 0;
+    height: 70%;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.job p, .job li{
+    font-size: 0.65rem;
+    color: white;
+    font-weight: 300;
+}
+
+.job li{
+    list-style: none;
+}
+
+.job li::before{
+    display: inline-block;
+    position: relative;
+    top: 0.15rem;
+    content: url("../static/check.svg");
+    height: 0.7rem;
+    width: 0.7rem;
+    margin-right: 0.5rem;
+}
+
+.job p{
+    margin: 0;
+    position: relative;
+}
+
+.job span:not(.norm){
+    position: absolute;
+    right: 0;
+}
+
+.job span{
+    font-weight: 800;
+    color: var(--contrast);
+}
+
+.job span small, .job span sub, .job .norm{
+    font-weight: 300;
+    color: white;
+}
+
+.job p:nth-of-type(2){
+    margin-bottom: 0.6rem;
+}
+
+.hidden{
+    display: none;
+}
+
+.mid{
+    transform: scale(1, 1);
+}
+
+.side{
+    transform: scale(0.9, 0.9);
+}
+
+@keyframes appear{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.appear{
+    animation-name: appear;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    display: grid;
+}
+.disappear{
+    animation-name: appear;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-direction: reverse;
+    display: none;
+}
