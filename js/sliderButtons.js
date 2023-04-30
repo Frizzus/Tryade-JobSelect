@@ -1,10 +1,12 @@
 import { APP_STATE } from "./global.js";
+const jobsContainer = document.querySelector("#App>div");
 
 export function slideRight() {
     const state = APP_STATE.mid; // bool[]
 
     if (currentMid() + 2 < state.length ) {
         state.unshift(state.pop());
+        APP_STATE.loadedInDom[currentMid()].scrollIntoView({behavior: "smooth", inline: "center"});
         updateState();
     }
 }
@@ -14,6 +16,7 @@ export function slideLeft() {
 
     if (currentMid() - 2 >= 0 ) {
         state.push(state.shift());
+        APP_STATE.loadedInDom[currentMid()].scrollIntoView({behavior: "smooth", inline: "center"});
         updateState();
     }
 }
