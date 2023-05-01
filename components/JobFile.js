@@ -21,7 +21,7 @@ export function createJobFile(content) {
                 ${comps}
             </ul>
         </section>
-        <button>Accepter le travail</button>
+        <button data-job='${content.nom}'>Accepter le travail</button>
         `;
 
     container.insertAdjacentHTML("afterbegin", innerhtml);
