@@ -11,7 +11,7 @@
     transition: transform 0.3s ease-in-out;
 }
 
-.mid{
+.job.mid{
     transform: scale(1, 1);
 }
 
@@ -49,7 +49,7 @@
 
 .job>button{
     background-color: var(--button);
-    border-radius: 0.7rem 0.7rem 1.2rem 1.2rem;
+    border-radius: 0.4rem 0.4rem 1.2rem 1.2rem;
     color: #FFF;
     font-size: 0.75rem;
     font-family: "Poppins Medium";
@@ -63,7 +63,6 @@
 
 .job>button:active{
     outline: var(--contrast) solid 0.01rem;
-    color: white;
     background-color: var(--contrast);
 }
 

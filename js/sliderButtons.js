@@ -1,5 +1,5 @@
 import { APP_STATE } from "./global.js";
-const jobsContainer = document.querySelector("#App>div");
+const nav = document.querySelector("#App>nav");
 
 export function slideRight() {
     const state = APP_STATE.mid; // bool[]
@@ -31,6 +31,15 @@ function updateState() {
         }
         else{
             loadedInDom[i].classList.remove("mid");
+        }
+    }
+
+    for (let i = 0; i < nav.children.length; i++) {
+    if (mid[i+1]) {
+            nav.children[i].classList.add("mid");
+        }
+        else{
+            nav.children[i].classList.remove("mid");
         }
     }
 }

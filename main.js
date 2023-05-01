@@ -10,6 +10,7 @@ async function init() {
     APP_STATE.elements = json.jobs;
 
     const jobsContainer = document.querySelector("#App>div");
+    const nav = document.querySelector("#App>nav");
 
     for (let i = 1; i < APP_STATE.elements.length; i++) {
         APP_STATE.mid.push(false);
@@ -26,12 +27,17 @@ async function init() {
 
     // create component and add to the DOM
     let job;
+    let dot;
     for (let i = 0; i < APP_STATE.elements.length; i++) {
         job = createJobFile(APP_STATE.elements[i]);
+        dot = document.createElement("span");
+        // initialize the second card to be the middle one
         if (i == 1) {
             job.classList.add("mid");
+            dot.classList.add("mid");
         }
         APP_STATE.loadedInDom.push(job);
+        nav.appendChild(dot);
         jobsContainer.appendChild(job);
     }
     
