@@ -1,6 +1,7 @@
 import { APP_STATE } from "./js/global.js";
 import { createJobFile } from "./components/JobFile.js";
-import { slideLeft, slideRight } from "./js/sliderButtons.js";
+import { slideLeft, slideRight, keepOnWindowChange } from "./js/sliderButtons.js";
+import { fetchNui } from "./js/nui.js";
 
 
 async function init() {
@@ -47,6 +48,7 @@ async function init() {
     // Enable slider EventListener
     document.getElementById("rightButton").addEventListener("click", slideRight);
     document.getElementById("leftButton").addEventListener("click", slideLeft);
+    window.addEventListener("resize", keepOnWindowChange);
 
     // place to the right card at the launch of the interface
     APP_STATE.loadedInDom[2].scrollIntoView({behavior: "instant", inline: "center"});

@@ -21,6 +21,10 @@ export function slideLeft() {
     }
 }
 
+export function keepOnWindowChange() {
+    APP_STATE.loadedInDom[currentMid()].scrollIntoView({behavior: "instant", inline: "center"});
+}
+
 function updateState() {
     const loadedInDom = APP_STATE.loadedInDom; // HTMLElements[]
     const mid = APP_STATE.mid; // bool[]
