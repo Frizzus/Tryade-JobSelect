@@ -37,7 +37,7 @@ body{
 }
 
 html{
-  background-image: url("../static/placeholder.jpg");
+  /* background-image: url("../static/placeholder.jpg"); */
   background-size: cover;
   background-position: bottom center;
   background-color: #999;
@@ -132,4 +132,5 @@ nav>span{
   height: 0.7rem;
   margin: 0 0.3rem;
   display: inline-block;
+  transition: scale 0.3s ease-in-out;
 }

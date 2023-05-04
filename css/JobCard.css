@@ -58,11 +58,12 @@
 
 .job>button:hover{
     cursor: pointer;
-    outline: white solid 0.01rem;
+    /* outline: var(--navOutline) solid 0.01rem; */
+    background-color: var(--navOutline);
 }
 
 .job>button:active{
-    outline: var(--contrast) solid 0.01rem;
+    /* outline: var(--contrast) solid 0.01rem; */
     background-color: var(--contrast);
 }
 
